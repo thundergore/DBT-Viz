@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: US
+  - name: dev
     database: bigquery-public-data
     schema: google_trends
     freshness: # default freshness
