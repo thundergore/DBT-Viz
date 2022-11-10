@@ -1,0 +1,3 @@
+select *
+from {{ ref('fact_merged_top_rising') }}
+where date_week >= DATE_TRUNC(current_date(), year)

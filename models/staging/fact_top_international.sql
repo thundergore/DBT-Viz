@@ -1,4 +1,4 @@
-select   week
+select   week as date_week
        , country_name
        , country_code
        , region_name
