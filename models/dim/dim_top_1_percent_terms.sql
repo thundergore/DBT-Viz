@@ -1,6 +1,7 @@
-select  date_week 
+select  distinct date_week 
+      , country_code
       , search_term
       , ntile(100) over (partition by country_name order by rank asc) AS ntile_rank
 from {{ ref('dim_top_this_year_merged') }}
 qualify ntile_rank = 1
-order by date_week desc
+order by date_week desc, country_code asc
